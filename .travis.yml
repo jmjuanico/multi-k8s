@@ -26,6 +26,16 @@ deploy:
   on:
     branch: master
 
+# NOTES: encrypting service account using travis
+# docker run -it -v $(pwd):/app ruby:2.3 sh
+# gem install travis
+# travis login
+# travis encrypt-file service-account.json
+# generates a service-account.json.erc file
+# copy log intructions and setup in before_install
+# DELETE service-account.json once done
+# VERY IMPORTANT as this is your credentials
+
 # NOTES: scripts to run in gcloud active console
 # gcloud config set project your_project_id
 # gcloud config set compute/zone your_zone
