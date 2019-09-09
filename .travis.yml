@@ -25,3 +25,15 @@ deploy:
   script: bash ./deploy.sh
   on:
     branch: master
+
+# NOTES: scripts to run in gcloud active console
+# gcloud config set project your_project_id
+# gcloud config set compute/zone your_zone
+# gcloud container clusters get-credentials multi-cluster
+# kubectl create secret generic pgpassword --from-literal PGPASSWORD=passwordnimo
+# curl -LO https://git.io/get_helm.sh
+# chmod 700 get_helm.sh
+# kubectl create serviceaccount --namespace kube-system tiller
+# kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+# helm init --service-account tiller --upgrade
+# helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
