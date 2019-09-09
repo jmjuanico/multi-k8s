@@ -1,6 +1,6 @@
 docker build -t jmjuanico/multi-client:latest -t jmjuanico/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t jmjuanico/multi-server:latest -t jmjuanico/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t jmjuanico/multi-worker:latest -t jmjuanico/multi-server:$SHA -f ./worker/Dockerfile ./worker
+docker build -t jmjuanico/multi-worker:latest -t jmjuanico/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push jmjuanico/multi-client:latest
 docker push jmjuanico/multi-client:$SHA
 docker push jmjuanico/multi-server:latest
